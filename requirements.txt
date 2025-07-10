@@ -1,5 +1,7 @@
 fastapi
-uvicorn
+uvicorn[standard]
+stripe
 qiskit
 qiskit-finance
-stripe
+python-dotenv
+
