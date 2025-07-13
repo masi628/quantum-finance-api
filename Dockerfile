@@ -2,15 +2,16 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# 🔹 Copia PRIMA requirements.txt nella root del container
+# Copia requirements.txt e installa dipendenze
 COPY requirements.txt .
-
-# 🔹 Installa i pacchetti
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# 🔹 Poi copia tutta l'app (dopo i pacchetti: ottimizza cache Docker)
+# Copia il resto dell'app
 COPY ./app /app
 
-# 🔹 Comando di avvio (porta 8000 è ok se DigitalOcean la mappa)
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Esponi la porta 8080 (usata da DigitalOcean per health check)
+EXPOSE 8080
+
+# Comando di avvio corretto sulla porta giusta
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
