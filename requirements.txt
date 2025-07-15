@@ -1,17 +1,11 @@
-
-# Web
 fastapi==0.116.0
 uvicorn[standard]==0.30.1
 python-dotenv==1.0.1
 stripe==9.3.0
-
-# Quantum Computing
 qiskit==1.0.2
 qiskit-aer==0.13.3
 qiskit-finance==0.4.0
 qiskit-ibmq-provider==0.20.2
-
-# Utils
-numpy==1.26.4
+numpy==1.23.5
 pandas==2.2.2
 scikit-learn==1.4.2
