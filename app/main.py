@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from pydantic import BaseModel
 from quantum_robo_advisor import generate_portfolio
 from payments import create_checkout_session
@@ -6,9 +6,9 @@ from ai_scaler import calculate_price
 
 app = FastAPI()
 
-# 🔐 Definisci il modello dati per sicurezza e validazione
+# 🔐 Modello utente con validazione tramite Pydantic
 class UserInput(BaseModel):
-    email: str = ""
+    email: str
     risk: str = "medium"
     budget: float = 2.0
 
