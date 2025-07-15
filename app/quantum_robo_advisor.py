@@ -33,4 +33,4 @@ def generate_portfolio(user_profile: dict) -> dict:
         "portfolio": portfolio,
         "expected_return": expected_return,
         "leverage_derivative": derivative_price
-    
+    }
