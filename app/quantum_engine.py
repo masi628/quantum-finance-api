@@ -1,4 +1,3 @@
-
 from qiskit_finance.applications.optimization import PortfolioOptimization
 from qiskit_optimization.problems import QuadraticProgram
 from qiskit_algorithms import MinimumEigenOptimizer
