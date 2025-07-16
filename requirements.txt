@@ -1,11 +1,17 @@
-fastapi==0.116.0
-uvicorn[standard]==0.30.1
-python-dotenv==1.0.1
-stripe==9.3.0
-qiskit==1.0.2
-qiskit-aer==0.13.3
-qiskit-finance==0.4.0
-qiskit-ibmq-provider==0.20.2
-numpy==1.23.5
-pandas==2.2.2
-scikit-learn==1.4.2
+# Web Framework
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+
+# Qiskit Core e Moduli compatibili (≥1.0)
+qiskit>=1.0.0
+qiskit-finance>=0.4.0
+qiskit-optimization>=0.6.0
+qiskit-algorithms>=0.3.0
+
+# Pydantic per validazione input
+pydantic>=2.0.0
+
+# (facoltativi) se usi moduli separati tipo Stripe o calcolo prezzi AI
+stripe>=6.0.0
+numpy>=1.24.0
+scipy>=1.10.0
