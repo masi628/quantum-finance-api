@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from .quantum_robo_advisor import generate_portfolio
 from .payments import create_checkout_session
 from .ai_scaler import calculate_price
+from .email_sender import send_email
 
 app = FastAPI(
     title="Quantum Finance API",
@@ -10,7 +11,6 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# 🔐 Modello utente con validazione tramite Pydantic
 class UserInput(BaseModel):
     email: str
     risk: str = "medium"
@@ -26,16 +26,10 @@ def dynamic_price():
 
 @app.post("/subscribe")
 def subscribe(user: UserInput):
-    """
-    Crea una sessione di pagamento con Stripe per la sottoscrizione dell'utente.
-    """
-    return {
-        "checkout_url": create_checkout_session(customer_email=user.email)
-    }
+    url = create_checkout_session(customer_email=user.email)
+    send_email(user.email, "Benvenuto su Quantum Finance", "Grazie per esserti iscritto!")
+    return {"checkout_url": url}
 
 @app.post("/generate")
 def generate(user: UserInput):
-    """
-    Genera un portafoglio ottimizzato in base al profilo dell’utente.
-    """
     return generate_portfolio(user.dict())
