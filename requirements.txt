@@ -4,6 +4,8 @@ python-dotenv==1.0.1
 stripe==9.3.0
 qiskit==1.0.2
 qiskit-aer==0.13.3
-qiskit-ibmq-provider==0.20.2
 qiskit-finance==0.4.0
+qiskit-ibmq-provider==0.20.2
 numpy==1.23.5
+pandas==2.2.2
+scikit-learn==1.4.2
