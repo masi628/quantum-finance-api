@@ -1,22 +1,18 @@
+FROM python:3.10-slim
 
-FROM python:3.11-slim
-
-# Crea virtualenv per evitare conflitti
+# Virtualenv per isolare le dipendenze
 ENV VIRTUAL_ENV=/opt/venv
 RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 WORKDIR /app
 
-# Installa le dipendenze
+# Installa i requirements PRIMA per caching Docker
 COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copia l'app dopo aver installato le dipendenze (per cache Docker)
+# Poi copia i file app
 COPY ./app /app
 
-# Espone la porta 8080
 EXPOSE 8080
-
-# Comando di avvio
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
