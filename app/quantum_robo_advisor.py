@@ -1,5 +1,5 @@
-from quantum_engine import optimize_portfolio
-from quantum_derivatives import price_european_call
+from .quantum_engine import optimize_portfolio
+from .quantum_derivatives import price_european_call
 
 def generate_portfolio(user_profile: dict) -> dict:
     risk_level = user_profile.get("risk", "medium")
