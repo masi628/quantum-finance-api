@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: quantum-finance-api
+    env: python
+    repo: https://github.com/masi628/quantum-finance-api
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 8080
+    envVars:
+      - key: STRIPE_API_KEY
+        value: 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
+      - key: STRIPE_PRICE_ID
+        value: prod_SdyCKomxW8mJVR
+      - key: STRIPE_WEBHOOK_SECRET
+        value: whsec_ay40uNWZtOuiD556AinN492odCAoDLZG
+      - key: SMTP_HOST
+        value: smtp.zoho.eu
+      - key: SMTP_PORT
+        value: "465"
+      - key: SMTP_USER
+        value: noreply@quantumfinanceapi.it
+      - key: SMTP_PASS
+        value: 7J16GEYvCdfT
+      - key: APP_DOMAIN
+        value: https://app.quantumfinanceapi.it
