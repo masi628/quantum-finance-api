@@ -12,12 +12,15 @@ jinja2
 python-jose[cryptography]
 passlib[bcrypt]
 
-# Stripe per pagamenti
+# Stripe per pagamenti live
 stripe
 
-# SMTP email
+# SMTP email (es. Zoho)
 aiosmtplib
 
-# Qiskit e algoritmi quantistici compatibili con BaseSampler
+# Qiskit core e moduli aggiuntivi
 qiskit==0.44.0
+qiskit-finance==0.5.0
 qiskit-algorithms==0.3.0
+
+
