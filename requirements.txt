@@ -12,13 +12,13 @@ jinja2==3.1.3
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 
-# Pagamenti
+# Stripe per pagamenti
 stripe==9.7.0
 
-# SMTP email (es. Zoho)
+# SMTP email compatibile
 aiosmtplib==1.1.6
 
-# Quantum computing compatibile (stabile per Render)
+# Quantum computing
 qiskit==0.39.2
 qiskit-finance==0.3.4
 qiskit-algorithms==0.2.1
