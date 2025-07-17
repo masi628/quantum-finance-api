@@ -1,24 +1,24 @@
-fastapi==0.110.0
-uvicorn[standard]==0.29.0
-python-dotenv==1.0.1
-pydantic==2.6.4
-requests==2.31.0
-httpx==0.27.0
-email-validator==2.1.1
-python-multipart==0.0.9
-jinja2==3.1.3
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+requests
+httpx
+email-validator
+python-multipart
+jinja2
 
-# Sicurezza e autenticazione
-python-jose[cryptography]==3.3.0
-passlib[bcrypt]==1.7.4
+# Sicurezza
+python-jose[cryptography]
+passlib[bcrypt]
 
-# Stripe per pagamenti
-stripe==9.7.0
+# Stripe
+stripe>=5.0.0
 
-# SMTP email compatibile
+# SMTP email stabile
 aiosmtplib==1.1.6
 
-# Quantum computing
-qiskit==0.39.2
-qiskit-finance==0.3.4
-qiskit-algorithms==0.2.1
+# Qiskit compatibili (testati)
+qiskit==0.44.0
+qiskit-finance==0.4.0
+qiskit-algorithms==0.2.0
