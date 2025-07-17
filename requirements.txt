@@ -18,9 +18,7 @@ stripe
 # SMTP email (es. Zoho)
 aiosmtplib
 
-# Qiskit core e moduli aggiuntivi
+# Qiskit core e moduli aggiuntivi (verificati compatibili)
 qiskit==0.44.0
-qiskit-finance==0.5.0
-qiskit-algorithms==0.3.0
-
-
+qiskit-finance==0.4.1
+qiskit-algorithms==0.2.1
