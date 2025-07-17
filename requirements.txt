@@ -1,12 +1,23 @@
 fastapi
 uvicorn[standard]
-pydantic>=2.0.0
-qiskit>=1.0.0
-qiskit-finance>=0.4.0
-qiskit-optimization>=0.6.0
-qiskit-algorithms>=0.3.0
-qiskit-aer
-stripe
-numpy
-scipy
 python-dotenv
+pydantic
+requests
+httpx
+email-validator
+python-multipart
+jinja2
+
+# Sicurezza e autenticazione
+python-jose[cryptography]
+passlib[bcrypt]
+
+# Stripe per pagamenti
+stripe
+
+# SMTP email
+aiosmtplib
+
+# Qiskit e algoritmi quantistici compatibili con BaseSampler
+qiskit==0.44.0
+qiskit-algorithms==0.3.0
